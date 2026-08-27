@@ -166,9 +166,11 @@ input, select, textarea {
     gap: 0.75rem;
 }
 
-.logo i {
-    font-size: 2rem;
-    color: var(--primary);
+.logo-img {
+    width: auto;
+    height: 48px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .logo-text {
