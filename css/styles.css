@@ -168,7 +168,7 @@ input, select, textarea {
 
 .logo-img {
     width: auto;
-    height: 48px;
+    height: 40px;
     object-fit: contain;
     flex-shrink: 0;
 }
@@ -377,7 +377,8 @@ input, select, textarea {
 }
 
 .section-title.light {
-    color: var(--white);
+    color: var(--accent);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .section-subtitle {
