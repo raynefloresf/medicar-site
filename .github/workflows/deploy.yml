@@ -18,19 +18,14 @@ jobs:
       - name: Checkout código
         uses: actions/checkout@v4
 
-      # 2. Configurar Node.js (Wrangler requiere Node >= 20)
-      - name: Configurar Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      # 3. Desplegar a Cloudflare Pages
+      # 2. Desplegar a Cloudflare Pages
+      #    El action oficial crea el proyecto automáticamente si no existe
       - name: Desplegar a Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy . --project-name=medicarelectronic
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: medicarelectronic
+          directory: .
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          wranglerVersion: '4'
