@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo completo de repuestos automotrices - Medicar Electronic C.A.">
+    <title>Catálogo de Productos | Medicar Electronic C.A.</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(220, 38, 38, 0.7)),
+                        url('https://images.unsplash.com/photo-1486496572940-2bb2341fdbdf?w=1920&q=80') center/cover;
+            color: var(--white);
+            padding: 150px 0 80px;
+            text-align: center;
+        }
+        .page-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .breadcrumb a { color: var(--accent); }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .catalog-filters {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1.25rem;
+            border: 2px solid var(--gray-300);
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+        .search-box:focus-within {
+            border-color: var(--primary);
+        }
+        .search-box i { color: var(--gray-500); }
+        .search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <i class="fas fa-car-crash"></i>
+                    <div class="logo-text">
+                        <span class="logo-name">Medicar Electronic</span>
+                        <span class="logo-slogan">El médico de tu vehículo</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="nav" id="nav">
+                <a href="../index.html#inicio" class="nav-link">Inicio</a>
+                <a href="../index.html#nosotros" class="nav-link">Nosotros</a>
+                <a href="productos.html" class="nav-link active">Productos</a>
+                <a href="../index.html#servicios" class="nav-link">Servicios</a>
+                <a href="../index.html#ubicacion" class="nav-link">Ubicación</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Nuestro Catálogo</h1>
+            <div class="breadcrumb">
+                <a href="../index.html">Inicio</a>
+                <span>/</span>
+                <span>Productos</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="catalog-filters">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Buscar repuesto, marca o categoría...">
+                </div>
+            </div>
+
+            <div class="products-tabs">
+                <button class="tab-btn active" data-category="todos"><i class="fas fa-th"></i> Todos</button>
+                <button class="tab-btn" data-category="motor"><i class="fas fa-cogs"></i> Motor</button>
+                <button class="tab-btn" data-category="electrico"><i class="fas fa-bolt"></i> Eléctrico</button>
+                <button class="tab-btn" data-category="frenos"><i class="fas fa-compact-disc"></i> Frenos</button>
+                <button class="tab-btn" data-category="suspension"><i class="fas fa-car-side"></i> Suspensión</button>
+                <button class="tab-btn" data-category="accesorios"><i class="fas fa-tachometer-alt"></i> Accesorios</button>
+            </div>
+
+            <div class="products-grid" id="products-grid"></div>
+
+            <div class="products-cta">
+                <p>¿No encuentras lo que buscas? Contáctanos y te lo conseguimos</p>
+                <a href="https://wa.me/584145550000" target="_blank" rel="noopener" class="btn btn-primary">
+                    <i class="fab fa-whatsapp"></i> Consultar Disponibilidad
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Medicar Electronic C.A. - Todos los derechos reservados.</p>
+                <p>Ing. Yonathan Reyes | Av. Delicias, Maracaibo, Zulia</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/584145550000" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    const term = e.target.value.toLowerCase();
+                    const cards = document.querySelectorAll('.product-card');
+                    cards.forEach(card => {
+                        const text = card.textContent.toLowerCase();
+                        card.style.display = text.includes(term) ? '' : 'none';
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

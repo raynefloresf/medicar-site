@@ -1,0 +1,13 @@
+# Cloudflare Pages redirects
+# Formato: [origen] [destino] [status]
+
+# Redirección principal
+/ /index.html 200
+
+# Redirecciones de páginas antiguas
+/home /index.html 301
+/contacto /pages/contacto.html 301
+/productos /pages/productos.html 301
+
+# Forzar HTTPS (lo maneja Cloudflare automáticamente)
+# http://* https://$host$request_uri 301!

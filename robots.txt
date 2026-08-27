@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://medicarelectronic.com/sitemap.xml

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contáctanos - Medicar Electronic C.A.">
+    <title>Contacto | Medicar Electronic C.A.</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(220, 38, 38, 0.7)),
+                        url('https://images.unsplash.com/photo-1423666639041-f56000c27a9e?w=1920&q=80') center/cover;
+            color: var(--white);
+            padding: 150px 0 80px;
+            text-align: center;
+        }
+        .page-hero h1 { color: var(--white); font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 1rem; }
+        .breadcrumb { display: flex; justify-content: center; gap: 0.5rem; }
+        .breadcrumb a { color: var(--accent); }
+        .contact-full-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        .info-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1.25rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray-200);
+        }
+        .info-card .icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.25rem;
+        }
+        .info-card h3 { color: var(--dark); margin-bottom: 0.25rem; }
+        .info-card p { color: var(--gray-700); margin: 0; }
+        @media (max-width: 768px) {
+            .contact-full-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <i class="fas fa-car-crash"></i>
+                    <div class="logo-text">
+                        <span class="logo-name">Medicar Electronic</span>
+                        <span class="logo-slogan">El médico de tu vehículo</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="nav" id="nav">
+                <a href="../index.html#inicio" class="nav-link">Inicio</a>
+                <a href="../index.html#nosotros" class="nav-link">Nosotros</a>
+                <a href="productos.html" class="nav-link">Productos</a>
+                <a href="../index.html#servicios" class="nav-link">Servicios</a>
+                <a href="../index.html#ubicacion" class="nav-link">Ubicación</a>
+                <a href="contacto.html" class="nav-link active">Contacto</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Contáctanos</h1>
+            <div class="breadcrumb">
+                <a href="../index.html">Inicio</a>
+                <span>/</span>
+                <span>Contacto</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="contact-full-grid">
+                <div>
+                    <h2 style="margin-bottom: 1.5rem; color: var(--dark);">Información de Contacto</h2>
+                    
+                    <div class="info-card">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h3>Dirección</h3>
+                            <p>Av. Delicias, Maracaibo, Estado Zulia</p>
+                            <p style="font-style: italic; color: var(--gray-600);">Al lado de la Funeraria El Carmen</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h3>Teléfonos</h3>
+                            <p>
+                                <a href="tel:+584145550000" style="color: var(--primary);">+58 414-555-0000</a><br>
+                                <a href="tel:+582615550000" style="color: var(--primary);">0261-555-0000</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon"><i class="fab fa-whatsapp"></i></div>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <p><a href="https://wa.me/584145550000" target="_blank" style="color: var(--whatsapp);">+58 414-555-0000</a></p>
+                            <p style="font-size: 0.85rem; color: var(--gray-600);">Atención rápida por mensaje</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h3>Correo Electrónico</h3>
+                            <p>
+                                <a href="mailto:info@medicarelectronic.com" style="color: var(--primary);">info@medicarelectronic.com</a><br>
+                                <a href="mailto:ventas@medicarelectronic.com" style="color: var(--primary);">ventas@medicarelectronic.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h3>Horario</h3>
+                            <p><strong>Lun-Vie:</strong> 8:00 AM - 5:00 PM</p>
+                            <p><strong>Sábados:</strong> 8:00 AM - 2:00 PM</p>
+                            <p><strong>Domingos:</strong> Cerrado</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links" style="margin-top: 1.5rem;">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 style="margin-bottom: 1.5rem; color: var(--dark);">Envíanos un Mensaje</h2>
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre">Nombre completo *</label>
+                                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono *</label>
+                                <input type="tel" id="telefono" name="telefono" required placeholder="+58 414-XXX-XXXX">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Correo electrónico *</label>
+                                <input type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="vehiculo">Vehículo</label>
+                                <input type="text" id="vehiculo" name="vehiculo" placeholder="Marca, modelo, año">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="asunto">Asunto *</label>
+                            <select id="asunto" name="asunto" required>
+                                <option value="">Selecciona un asunto</option>
+                                <option value="cotizacion">Cotización de repuesto</option>
+                                <option value="venta-mayor">Venta al mayor</option>
+                                <option value="servicio">Solicitud de servicio</option>
+                                <option value="diagnostico">Diagnóstico electrónico</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" rows="6" required placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                        </button>
+
+                        <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Medicar Electronic C.A. - Todos los derechos reservados.</p>
+                <p>Ing. Yonathan Reyes | Av. Delicias, Maracaibo, Zulia</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/584145550000" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
