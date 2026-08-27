@@ -1,4 +1,27 @@
-# 🚀 Guía Rápida de Despliegue en Cloudflare Pages
+# 🚀 Guía Rápida de Despliegue en Cloudflare
+
+## 🔄 Despliegue Automático con GitHub Actions (Recomendado)
+
+Este repositorio incluye un workflow en `.github/workflows/deploy.yml` que despliega automáticamente el sitio a Cloudflare Workers cada vez que haces push a la rama `master`.
+
+### Configuración de Secrets (una sola vez)
+
+1. Ve a tu repositorio en GitHub → **Settings** → **Secrets and variables** → **Actions**.
+2. Click en **"New repository secret"** y añade estos dos secrets:
+
+| Secret | Descripción | Dónde obtenerlo |
+|--------|-------------|-----------------|
+| `CLOUDFLARE_API_TOKEN` | Token de la API de Cloudflare | Cloudflare Dashboard → My Profile → API Tokens → Create Token (permiso `Workers Scripts: Edit` + `Account Settings: Read`) |
+| `CLOUDFLARE_ACCOUNT_ID` | ID de tu cuenta Cloudflare | Cloudflare Dashboard → My Profile → la URL tiene `/account/{ID}` o aparece en la esquina inferior izquierda |
+
+3. Verifica que el nombre del Worker en `wrangler.jsonc` coincida con el que quieres usar (`medicarelectronic`).
+
+### Activación
+
+- **Automática:** Cada `git push` a `master` dispara el despliegue.
+- **Manual:** Ve a la pestaña **Actions** → **"Deploy a Cloudflare"** → **Run workflow**.
+
+---
 
 ## Opción Más Rápida: Drag & Drop (5 minutos)
 
