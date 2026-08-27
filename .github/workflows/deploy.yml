@@ -18,14 +18,31 @@ jobs:
       - name: Checkout código
         uses: actions/checkout@v4
 
-      # 2. Desplegar a Cloudflare Pages
-      #    El action oficial crea el proyecto automáticamente si no existe
-      - name: Desplegar a Cloudflare Pages
-        uses: cloudflare/pages-action@v1
+      # 2. Configurar Node.js (Wrangler requiere Node >= 20)
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 3. Crear el proyecto de Pages si no existe (se ignora el error si ya existe)
+      - name: Crear proyecto de Cloudflare Pages (si no existe)
+        uses: cloudflare/wrangler-action@v3
+        continue-on-error: true
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: medicarelectronic
-          directory: .
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          wranglerVersion: '4'
+          command: pages project create medicarelectronic --production-branch=master
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      # 4. Desplegar a Cloudflare Pages
+      - name: Desplegar a Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy . --project-name=medicarelectronic --commit-dirty=true --branch=master
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
