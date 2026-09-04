@@ -765,6 +765,19 @@ input, select, textarea {
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
 }
 
+.brand-logo {
+    width: 120px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+    filter: drop-shadow(0 3px 8px rgba(0,0,0,0.6)) brightness(0) invert(1);
+    transition: var(--transition);
+}
+
+.brand-item:hover .brand-logo {
+    filter: drop-shadow(0 5px 15px rgba(245, 158, 11, 0.5)) brightness(1.1);
+}
+
 .brand-item span {
     font-weight: 800;
     color: #ffffff;
