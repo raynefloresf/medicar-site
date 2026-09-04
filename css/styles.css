@@ -726,7 +726,7 @@ input, select, textarea {
 
 /* ===== Marcas ===== */
 .brands {
-    background-color: var(--dark);
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
     color: var(--white);
 }
 
@@ -742,27 +742,45 @@ input, select, textarea {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem;
-    background-color: rgba(255,255,255,0.05);
-    border-radius: var(--radius);
+    padding: 2rem 1.5rem;
+    background: #ffffff;
+    border-radius: var(--radius-lg);
     transition: var(--transition);
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 .brand-item:hover {
-    background-color: rgba(255,255,255,0.1);
-    transform: translateY(-3px);
+    background: #f8f9fa;
+    transform: translateY(-8px);
+    border-color: #f59e0b;
+    box-shadow: 0 12px 28px rgba(245, 158, 11, 0.25);
 }
 
 .brand-item i {
-    font-size: 2.5rem;
-    color: var(--accent);
-    margin-bottom: 0.5rem;
+    font-size: 3.5rem;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+.brand-logo {
+    width: 140px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+    transition: var(--transition);
+}
+
+.brand-item:hover .brand-logo {
+    transform: scale(1.05);
 }
 
 .brand-item span {
-    font-weight: 600;
-    color: var(--white);
+    font-weight: 700;
+    color: #1a1a1a;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 /* ===== Ubicación ===== */
