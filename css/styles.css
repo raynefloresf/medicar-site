@@ -726,7 +726,7 @@ input, select, textarea {
 
 /* ===== Marcas ===== */
 .brands {
-    background-color: var(--dark);
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
     color: var(--white);
 }
 
@@ -743,32 +743,35 @@ input, select, textarea {
     align-items: center;
     justify-content: center;
     padding: 2rem 1.5rem;
-    background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+    background: linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.05));
     border-radius: var(--radius-lg);
     transition: var(--transition);
-    border: 1px solid rgba(255,255,255,0.15);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    border: 2px solid rgba(255,255,255,0.25);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
 .brand-item:hover {
-    background: linear-gradient(145deg, rgba(245, 158, 11, 0.15), rgba(255,255,255,0.08));
-    transform: translateY(-5px);
-    border-color: rgba(245, 158, 11, 0.4);
-    box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+    background: linear-gradient(145deg, rgba(245, 158, 11, 0.25), rgba(255,255,255,0.1));
+    transform: translateY(-8px);
+    border-color: rgba(245, 158, 11, 0.6);
+    box-shadow: 0 12px 28px rgba(245, 158, 11, 0.3);
 }
 
 .brand-item i {
-    font-size: 3rem;
-    color: var(--accent);
+    font-size: 3.5rem;
+    color: #ffffff;
     margin-bottom: 0.75rem;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 0 3px 8px rgba(0,0,0,0.6), 0 0 20px rgba(255,255,255,0.3);
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
 }
 
 .brand-item span {
-    font-weight: 700;
-    color: var(--white);
-    font-size: 1rem;
-    letter-spacing: 0.5px;
+    font-weight: 800;
+    color: #ffffff;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.8), 0 0 10px rgba(255,255,255,0.2);
 }
 
 /* ===== Ubicación ===== */
