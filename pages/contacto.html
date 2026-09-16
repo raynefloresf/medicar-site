@@ -154,7 +154,13 @@
 
                 <div>
                     <h2 style="margin-bottom: 1.5rem; color: var(--dark);">Envíanos un Mensaje</h2>
-                    <form class="contact-form" id="contactForm" novalidate>
+                    <form class="contact-form" id="contactForm" action="https://formsubmit.co/raynitoflores@gmail.com" method="POST" novalidate>
+                        <!-- Campos ocultos para FormSubmit -->
+                        <input type="hidden" name="_subject" value="Nuevo mensaje desde el formulario de contacto">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://medicarelectronic.com/pages/contacto.html?success=true">
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="nombre">Nombre completo *</label>
